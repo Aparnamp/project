@@ -1,0 +1,71 @@
+<script>
+		var divs = $("div.item");
+
+// $('#alphBnt').on('click', function () {
+//     var alphabeticallyOrderedDivs = $divs.sort(function (a, b) {
+//         return $(a).find("h1").text() > $(b).find("h1").text();
+//     });
+//     $("#container").html(alphabeticallyOrderedDivs);
+// });
+
+$('#numBnt').on('click', function () {
+    var numericallyOrderedDivs = divs.sort(function (a, b) {
+        return $(a).find(".price").text() > $(b).find(".price").text();
+    });
+    $("#demo").html(numericallyOrderedDivs);
+});
+
+
+$('#numtime').on('click', function () {
+    var numericallyOrderedDivs = $divs.sort(function (a, b) {
+        return $(a).find(".time").text() > $(b).find(".time").text();
+    });
+    $("#demo").html(numericallyOrderedDivs);
+});
+$('#numrate').on('click', function () {
+    var numericallyOrderedDivs = $divs.sort(function (a, b) {
+        return $(a).find(".price").text() > $(b).find(".price").text();
+    });
+    $("#demo").html(numericallyOrderedDivs);
+});
+
+$('#numselect').on('change', function () {
+	  var ser=$('#numselect').val();
+		if(ser=='earliest'){
+			var numericallyOrderedDivs = $divs.sort(function (a, b) {
+        return $(a).find(".take-offtime").text() > $(b).find(".take-offtime").text();
+    });
+    $("#demo").html(numericallyOrderedDivs);
+		}else{
+			var numericallyOrderedDivs = $divs.sort(function (a, b) {
+        return $(a).find(".take-offtime").text() < $(b).find(".take-offtime").text();
+    });
+    $("#demo").html(numericallyOrderedDivs);
+		}
+    
+});
+		</script>
+
+
+        <script>
+		var $divs = $("div.item");
+
+// $('#alphBnt').on('click', function () {
+//     var alphabeticallyOrderedDivs = $divs.sort(function (a, b) {
+//         return $(a).find("h1").text() > $(b).find("h1").text();
+//     });
+//     $("#container").html(alphabeticallyOrderedDivs);
+// });
+
+
+
+<!-- <script>
+ 
+ function numtimee(){
+	var divs = $("div.item");
+	var numericallyOrderedDivs = divs.sort(function (a, b) {
+        return $(a).find(".time").text() > $(b).find(".time").text() ? 1 : -1;
+    });		
+    $("#demo").html(numericallyOrderedDivs);
+}
+ </script> -->
